@@ -1,7 +1,7 @@
 HADOOP_VERSION:=2.7.3
 VERSION:=2.1.1
 NAME:=spark
-DIR:=$(NAME)-$(VERSION)-SNAPSHOT-bin-$(HADOOP_VERSION)
+DIR:=$(NAME)-$(VERSION)-bin-$(HADOOP_VERSION)
 TARBALL:=$(DIR).tgz
 URL:=http://d3kbcqa49mib13.cloudfront.net/$(TARBALL)
 
