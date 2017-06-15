@@ -1,0 +1,2 @@
+/spark/**: ${MODULE_DIR}/ROOTFS/spark/**
+/usr/lib/libOsvProcessBuilder.so: ${MODULE_DIR}/ROOTFS/usr/lib/libOsvProcessBuilder.so

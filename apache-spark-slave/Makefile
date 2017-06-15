@@ -16,6 +16,9 @@ ROOTFS/$(NAME): $(TARBALL)
 	mkdir -p ROOTFS
 	mv $(DIR) ROOTFS/$(NAME)
 	touch ROOTFS/$(NAME)
+	mkdir -p ROOTFS/etc
+	touch ROOTFS/etc/javamains
+	echo "-cp /spark/conf:/spark/jars/* -Dscala.usejavacp=true org.apache.spark.deploy.worker.Worker 172.16.122.4:7077" > ROOTFS/etc/javamains
 	find ./assets/conf -type f -exec cp {} ROOTFS/$(NAME)/conf/. \;
 	mkdir -p ROOTFS/$(NAME)/./launcher/target/scala-2.11
 	touch ROOTFS/$(NAME)/./launcher/target/scala-2.11/.temp.txt
